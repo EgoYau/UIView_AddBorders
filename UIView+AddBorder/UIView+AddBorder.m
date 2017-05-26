@@ -36,7 +36,7 @@ static void *borderInsetsKey    = @"UIViewAddBorder_BorderInsetsKey";
             break;
         case BorderPositionBottom:
             x = self.al_insets.left;
-            y = height - self.al_insets.bottom;
+            y = height - self.al_insets.bottom - borderWidth;
             w = width - self.al_insets.left - self.al_insets.right;
             h = borderWidth;
             break;
@@ -47,7 +47,7 @@ static void *borderInsetsKey    = @"UIViewAddBorder_BorderInsetsKey";
             h = height - self.al_insets.top - self.al_insets.bottom;
             break;
         case BorderPositionRight:
-            x = width - self.al_insets.right;
+            x = width - self.al_insets.right - borderWidth;
             y = self.al_insets.top;
             w = borderWidth;
             h = height - self.al_insets.top - self.al_insets.bottom;
